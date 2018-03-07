@@ -12,3 +12,5 @@ models:
     runtime: gpu
     limit_opencl_kernel_time: 0
     dsp_mode: 0
+    obfuscate: 1
+    fast_conv: 0
