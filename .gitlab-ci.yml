@@ -5,6 +5,9 @@ release:
   stage: release
   only:
     - master
+  artifacts:
+    paths:
+     - build
   script:
     - env
     - MODEL_ROOT_PATH=`pwd`
@@ -13,15 +16,18 @@ release:
     - git clone --recursive git@v9.git.n.xiaomi.com:deep-computing/libmace.git
     - pushd libmace
     - pushd mace
-    - echo ./tools/export_lib.sh arm64-v8a cpu ${LIBMACE_PATH}/include ${LIBMACE_PATH}/lib/libmace-arm64-v8a-cpu
-    - echo ./tools/export_lib.sh arm64-v8a gpu ${LIBMACE_PATH}/include ${LIBMACE_PATH}/lib/libmace-arm64-v8a-gpu
-    - echo ./tools/export_lib.sh arm64-v8a dsp ${LIBMACE_PATH}/include ${LIBMACE_PATH}/lib/libmace-arm64-v8a-dsp
-    - echo ./tools/export_lib.sh armeabi-v7a cpu ${LIBMACE_PATH}/include ${LIBMACE_PATH}/lib/libmace-armeabi-v7a-cpu
-    - echo ./tools/export_lib.sh armeabi-v7a gpu ${LIBMACE_PATH}/include ${LIBMACE_PATH}/lib/libmace-armeabi-v7a-gpu
-    - echo ./tools/export_lib.sh armeabi-v7a dsp ${LIBMACE_PATH}/include ${LIBMACE_PATH}/lib/libmace-armeabi-v7a-dsp
-    - ./tools/export_lib.sh host cpu ${LIBMACE_PATH}/include ${LIBMACE_PATH}/lib/libmace-host-cpu
+    - LIBMACE_EXPORT_PATH=../
+    - echo ./tools/export_lib.sh arm64-v8a cpu ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-arm64-v8a-cpu
+    - echo ./tools/export_lib.sh arm64-v8a gpu ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-arm64-v8a-gpu
+    - echo ./tools/export_lib.sh arm64-v8a dsp ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-arm64-v8a-dsp
+    - echo ./tools/export_lib.sh armeabi-v7a cpu ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-armeabi-v7a-cpu
+    - echo ./tools/export_lib.sh armeabi-v7a gpu ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-armeabi-v7a-gpu
+    - echo ./tools/export_lib.sh armeabi-v7a dsp ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-armeabi-v7a-dsp
+    - echo ./tools/export_lib.sh host cpu ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-host-cpu
     - popd
     - find $MODEL_ROOT_PATH -name *.yml | grep "$TARGET_FILE_PATTERN" | xargs -L 1 -I {} echo "python tools/mace_tools.py --config='{}' --tuning=true --mode=all --round=10"
+    - mkdir build && echo hello > build/artifacts.txt
+    - mv build $MODEL_ROOT_PATH
     - popd
     - popd
     - rm -rf $MACE_WORK_DIR
