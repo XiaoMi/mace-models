@@ -8,6 +8,7 @@ release:
   artifacts:
     paths:
      - build
+    expire_in: 1 week
   script:
     - env
     - MODEL_ROOT_PATH=`pwd`
