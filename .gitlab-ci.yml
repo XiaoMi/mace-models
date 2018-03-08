@@ -1,0 +1,10 @@
+stages:
+  - release
+
+release:
+  stage: release
+  only:
+    - master
+  script:
+    - env
+
