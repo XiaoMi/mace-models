@@ -5,10 +5,14 @@ models:
   mobilenet_v1:
     model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/mobilenet-v1/mobilenet_v1_1.0.pb
     model_sha256_checksum: 71b10f540ece33c49a7b51f5d4095fc9bd78ce46ebf0300487b2ee23d71294e6
-    input_node: input
-    output_node: MobilenetV1/Predictions/Reshape_1
-    input_shape: 1,224,224,3
-    output_shape: 1,1,1,1001
+    input_nodes:
+      - input
+    input_shapes:
+      - 1,224,224,3
+    output_nodes:
+      - MobilenetV1/Predictions/Reshape_1
+    output_shapes:
+      - 1,1,1,1001
     runtime: gpu
     limit_opencl_kernel_time: 0
     dsp_mode: 0

@@ -5,10 +5,14 @@ models:
   inception_v3:
     model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/inception-v3/inception-v3.pb
     model_sha256_checksum: 632bb664547c846e7b4e44fe6a2ff9e35df277eb6440b80d9b559302baab1b8d
-    input_node: input
-    output_node: InceptionV3/Predictions/Reshape_1
-    input_shape: 1,299,299,3
-    output_shape: 1,1,1,1001
+    input_nodes:
+      - input
+    input_shapes:
+      - 1,299,299,3
+    output_nodes:
+      - InceptionV3/Predictions/Reshape_1
+    output_shapes:
+      - 1,1,1,1001
     runtime: gpu
     limit_opencl_kernel_time: 0
     dsp_mode: 0
