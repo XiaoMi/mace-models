@@ -25,7 +25,7 @@ release:
     - ./tools/export_lib.sh armeabi-v7a dsp ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-armeabi-v7a-dsp
     - ./tools/export_lib.sh host cpu ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-host-cpu
     - popd
-    - find $MODEL_ROOT_PATH -name *.yml | grep "$TARGET_FILE_PATTERN" | xargs -L 1 -I {} python tools/mace_tools.py --config="{}" --tuning=true --mode=all --round=10
+    - find $MODEL_ROOT_PATH -name *.yml | grep -v ".gitlab-ci.yml" | grep "$TARGET_FILE_PATTERN" | xargs -L 1 -I {} python tools/mace_tools.py --config="{}" --tuning=true --mode=all --round=10
     - mv build $MODEL_ROOT_PATH
     - popd
     - popd

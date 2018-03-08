@@ -3,6 +3,7 @@ embed_model_data: 1
 vlog_level: 0
 models:
   mobilenet_v1_10:
+    platform: tensorflow
     model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/mobilenet-v1-10/mobilenet-v1-10.pb
     model_sha256_checksum: 1cf06ba7d917bde65ea61d8e2cd75364721344cdc9a746f0fdbd0d15bdf70824
     input_nodes:

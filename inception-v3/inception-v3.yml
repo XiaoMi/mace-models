@@ -3,6 +3,7 @@ embed_model_data: 1
 vlog_level: 0
 models:
   inception_v3:
+    platform: tensorflow
     model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/inception-v3/inception-v3.pb
     model_sha256_checksum: 632bb664547c846e7b4e44fe6a2ff9e35df277eb6440b80d9b559302baab1b8d
     input_nodes:
