@@ -1,0 +1,22 @@
+target_abis: [arm64-v8a]
+target_socs: [MSM8953] # target_socs not enabled yet
+embed_model_data: 1
+vlog_level: 0
+models:
+  resnet_v2_50:
+    platform: tensorflow
+    model_file_path: https://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/resnet_v2_50/model.pb
+    model_sha256_checksum: 713c1a5cbe23d8113f4c013107c8296210b24720b365799023e033c1aa4f9360
+    input_nodes:
+      - input
+    output_nodes:
+      - resnet_v2_50/predictions/Reshape_1
+    input_shapes:
+      - 1,299,299,3
+    output_shapes:
+      - 1,1,1,1001
+    runtime: gpu
+    limit_opencl_kernel_time: 0
+    dsp_mode: 4
+    obfuscate: 1
+    fast_conv: 0
