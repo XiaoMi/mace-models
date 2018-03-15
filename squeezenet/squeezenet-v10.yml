@@ -1,0 +1,21 @@
+target_abis: [arm64-v8a]
+target_socs: [MSM8953] # target_socs not enabled yet
+embed_model_data: 0
+vlog_level: 0
+models:
+  squeezenet_v1_0:
+    platform: caffe
+    model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/squeezenet/SqueezeNet_v1.0/model.prototxt
+    weight_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/squeezenet/SqueezeNet_v1.0/weight.caffemodel
+    model_sha256_checksum: 5e37e43282bee8fa7e7e2689df1dfe6dd11a471cb5b27578719d4ffcaca944f2
+    weight_sha256_checksum: 9ff8035aada1f9ffa880b35252680d971434b141ec9fbacbe88309f0f9a675ce
+    input_nodes: input
+    output_nodes: prob
+    input_shapes: 1,227,227,3
+    output_shapes: 1,1,1,1000
+    runtime: gpu
+    limit_opencl_kernel_time: 0
+    dsp_mode: 0
+    obfuscate: 1
+    fast_conv: 0
+  
