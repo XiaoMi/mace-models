@@ -14,8 +14,18 @@ release:
     - MODEL_ROOT_PATH=`pwd`
     - MACE_WORK_DIR=`mktemp -d`
     - pushd $MACE_WORK_DIR
-    - GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone git@v9.git.n.xiaomi.com:deep-computing/mace.git
+    - git clone --recursive git@v9.git.n.xiaomi.com:deep-computing/libmace.git
+    - pushd libmace
     - pushd mace
+    - LIBMACE_EXPORT_PATH=../
+    - ./tools/export_lib.sh arm64-v8a cpu ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-arm64-v8a-cpu
+    - ./tools/export_lib.sh arm64-v8a gpu ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-arm64-v8a-gpu
+    - ./tools/export_lib.sh arm64-v8a dsp ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-arm64-v8a-dsp
+    - ./tools/export_lib.sh armeabi-v7a cpu ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-armeabi-v7a-cpu
+    - ./tools/export_lib.sh armeabi-v7a gpu ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-armeabi-v7a-gpu
+    - ./tools/export_lib.sh armeabi-v7a dsp ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-armeabi-v7a-dsp
+    - ./tools/export_lib.sh host cpu ${LIBMACE_EXPORT_PATH}/include ${LIBMACE_EXPORT_PATH}/lib/libmace-host-cpu
+    - popd
     - find $MODEL_ROOT_PATH -name *.yml | grep -v ".gitlab-ci.yml" | grep "$TARGET_FILE_PATTERN" | xargs -L 1 -I {} python tools/mace_tools.py --config="{}" --tuning=true --mode=all --round=10
     - mv build $MODEL_ROOT_PATH
     - popd
