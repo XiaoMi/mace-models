@@ -14,8 +14,7 @@ release:
     - MODEL_ROOT_PATH=`pwd`
     - MACE_WORK_DIR=`mktemp -d`
     - pushd $MACE_WORK_DIR
-    - GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-    - git clone git@v9.git.n.xiaomi.com:deep-computing/mace.git
+    - GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone git@v9.git.n.xiaomi.com:deep-computing/mace.git
     - pushd mace
     - find $MODEL_ROOT_PATH -name *.yml | grep -v ".gitlab-ci.yml" | grep "$TARGET_FILE_PATTERN" | xargs -L 1 -I {} python tools/mace_tools.py --config="{}" --tuning=true --mode=all --round=10
     - mv build $MODEL_ROOT_PATH
