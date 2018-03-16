@@ -14,7 +14,7 @@ release:
     - MODEL_ROOT_PATH=`pwd`
     - MACE_WORK_DIR=`mktemp -d`
     - pushd $MACE_WORK_DIR
-    - git clone --recursive git@v9.git.n.xiaomi.com:deep-computing/libmace.git
+    - GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone --recursive git@v9.git.n.xiaomi.com:deep-computing/libmace.git
     - pushd libmace
     - pushd mace
     - LIBMACE_EXPORT_PATH=../
