@@ -1,11 +1,11 @@
 target_abis: [armeabi-v7a]
-target_socs: [msm8996] # Mi5
+target_socs: [sdm845] # D5X
 embed_model_data: 1
 vlog_level: 0
 models:
   inception_v3_cpu:
     platform: tensorflow
-    model_file_path: https://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/inception-v3/inception-v3.pb
+    model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/inception-v3/inception-v3.pb
     model_sha256_checksum: 632bb664547c846e7b4e44fe6a2ff9e35df277eb6440b80d9b559302baab1b8d
     input_nodes:
       - input
@@ -22,7 +22,7 @@ models:
     fast_conv: 0
   inception_v3_gpu:
     platform: tensorflow
-    model_file_path: https://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/inception-v3/inception-v3.pb
+    model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/inception-v3/inception-v3.pb
     model_sha256_checksum: 632bb664547c846e7b4e44fe6a2ff9e35df277eb6440b80d9b559302baab1b8d
     input_nodes:
       - input
@@ -39,7 +39,7 @@ models:
     fast_conv: 0
   inception_v3_dsp:
     platform: tensorflow
-    model_file_path: https://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/inception-v3/inception_v3_q.pb
+    model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/inception-v3/inception_v3_q.pb
     model_sha256_checksum: 25a63a6e65b60033c025f4825dd932f728c8e9f1eac7f82de7e60e2eff673317
     input_nodes:
       - input
