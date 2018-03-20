@@ -11,12 +11,17 @@ release:
     expire_in: 1 week
   script:
     - env
+    - LAST_VALID_COMMIT_ID=`git log --format="%H" -n 1`
+    - LAST_VALID_COMMIT_FILE_NUM=`git diff-tree --no-commit-id --name-only -r $LAST_VALID_COMMIT_ID | wc -l`
+    - if [ "$LAST_VALID_COMMIT_FILE_NUM" -eq 0 ]; then LAST_VALID_COMMIT_ID=`git log --format="%H" -n 2 | tail -n1` ; fi
     - MODEL_ROOT_PATH=`pwd`
     - MACE_WORK_DIR=`mktemp -d`
     - pushd $MACE_WORK_DIR
     - GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone git@v9.git.n.xiaomi.com:deep-computing/mace.git
     - pushd mace
-    - find $MODEL_ROOT_PATH -name *.yml | grep -v ".gitlab-ci.yml" | grep "$TARGET_FILE_PATTERN" | xargs -L 1 -I {} python tools/mace_tools.py --config="{}" --tuning=true --mode=all --round=10
+    # Build only the changed files in the last 1 or 2 commits for the default trigger
+    - if [ -n "$TARGET_FILE_PATTERN" ]; then GET_MODEL_FILES_CMD="find $MODEL_ROOT_PATH -name *.yml"; else GET_MODEL_FILES_CMD="cd $MODEL_ROOT_PATH; git diff-tree --no-commit-id --name-only -r $LAST_VALID_COMMIT_ID | xargs -L 1 basename | { grep ".yml" || true; } |  xargs -L 1 -I {} find $MODEL_ROOT_PATH -name {}"; fi
+    - sh -c "$GET_MODEL_FILES_CMD" | { grep -v ".gitlab-ci.yml" || true; } | { grep "$TARGET_FILE_PATTERN" || true; } | xargs -L 1 -I {} echo python tools/mace_tools.py --config="{}" --tuning=true --mode=all --round=10
     - mv build $MODEL_ROOT_PATH
     - popd
     - popd
