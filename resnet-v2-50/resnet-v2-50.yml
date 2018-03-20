@@ -1,5 +1,5 @@
 target_abis: [arm64-v8a]
-target_socs: [MSM8953] # target_socs not enabled yet
+target_socs: [msm8996] # Mi5
 embed_model_data: 1
 vlog_level: 0
 models:
