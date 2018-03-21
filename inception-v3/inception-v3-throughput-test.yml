@@ -20,6 +20,7 @@ models:
     dsp_mode: 4
     obfuscate: 0
     fast_conv: 0
+    skip_validation: 1
   inception_v3_gpu:
     platform: tensorflow
     model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/inception-v3/inception-v3.pb
@@ -37,6 +38,7 @@ models:
     dsp_mode: 4
     obfuscate: 0
     fast_conv: 0
+    skip_validation: 1
   inception_v3_dsp:
     platform: tensorflow
     model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/inception-v3/inception_v3_q.pb
@@ -54,3 +56,4 @@ models:
     dsp_mode: 4
     obfuscate: 0
     fast_conv: 0
+    skip_validation: 1
