@@ -46,7 +46,7 @@ sudo fdsfuse mace-build-output /fds -o use_cache=/fdscache
 
 4. Start docker as deamon
 ```sh
-docker run --name mace-dev-runner -it -d --rm --privileged -v /fds/:/mace-build-output -v /dev/bus/usb:/dev/bus/usb /home/mace/gitlab-runner/config.toml:/etc/gitlab-runner/config.toml --net=host -v `pwd`/docker-ssh-keys:/root/.ssh cr.d.xiaomi.net/mace/gitlab-runner
+docker run --name mace-dev-runner -it -d --rm --privileged -v /fds/:/mace-build-output -v /dev/bus/usb:/dev/bus/usb -v /home/mace/gitlab-runner/config.toml:/etc/gitlab-runner/config.toml --net=host -v `pwd`/docker-ssh-keys:/root/.ssh cr.d.xiaomi.net/mace/gitlab-runner
 ```
 
 5. Create and set deploy key in your project (For the 1st time)
