@@ -46,7 +46,7 @@ sudo fdsfuse mace-build-output /fds -o use_cache=/fdscache
 
 4. Start docker as deamon
 ```sh
-docker run --name mace-dev-runner -it -d --rm --privileged -v /fds/:/mace-build-output -v /dev/bus/usb:/dev/bus/usb -v /home/mace/gitlab-runner/config.toml:/etc/gitlab-runner/config.toml --net=host -v `pwd`/docker-ssh-keys:/root/.ssh cr.d.xiaomi.net/mace/gitlab-runner
+docker run --name mace-dev-runner -it -d --rm --privileged -v /fds/:/mace-build-output -v /dev/bus/usb:/dev/bus/usb -v /home/mace/gitlab-runner/config.toml:/etc/gitlab-runner/config.toml --net=host -v /home/mace/docker-ssh-keys:/root/.ssh cr.d.xiaomi.net/mace/gitlab-runner
 ```
 
 5. Create and set deploy key in your project (For the 1st time)
@@ -62,4 +62,24 @@ docker exec -it mace-dev-runner gitlab-runner register
 # master
 # Whether to run untagged builds [true/false]:
 # [false]: true
+```
+
+7. Config auto register after runner host reboot
+```
+sudo chmod +x /etc/rc.local
+
+echo '#!/bin/bash
+
+# Waiting for fdsfuse dependencies
+sleep 10
+
+sudo XIAOMI_ACCESS_KEY_ID=AKWLOJLQHUJAIQWAB4 \
+    XIAOMI_SECRET_ACCESS_KEY=eHH3ODS3tjHY4IjEIWFvHg9I6JEZbsTD9JGZF0mq \
+    XIAOMI_FDS_ENDPOINT=cnbj1-inner-fds.api.xiaomi.net \
+    fdsfuse mace-build-output /fds -o use_cache=/fdscache
+
+docker run --name mace-dev-runner -it -d --rm --privileged -v /fds/:/mace-build-output -v /dev/bus/usb:/dev/bus/usb -v /home/mace/gitlab-runner/config.toml:/etc/gitlab-runner/config.toml --net=host -v /home/mace/docker-ssh-keys:/root/.ssh cr.d.xiaomi.net/mace/gitlab-runner
+
+exit 0
+' > /etc/rc.local
 ```
