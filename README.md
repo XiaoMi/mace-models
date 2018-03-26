@@ -26,17 +26,20 @@ curl -X POST \
 How to setup CI
 ---
 1. Install docker and add current user into docker group
+
 ```sh
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 ```
 
 2. Create ssh key persistence folder on host (For the 1st time)
+
 ```sh
 mkdir docker-ssh-keys
 ```
 
 3. Mount fds bucket to host (Ask mace-dev for AKSK)
+
 ```sh
 export XIAOMI_ACCESS_KEY_ID=XXXXXXXXXXXXX
 export XIAOMI_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXXXXXXX
@@ -45,17 +48,20 @@ sudo fdsfuse mace-build-output /fds -o use_cache=/fdscache
 ```
 
 4. Start docker as deamon
+
 ```sh
 docker run --name mace-dev-runner -it -d --rm --privileged -v /fds/:/mace-build-output -v /dev/bus/usb:/dev/bus/usb -v /home/mace/gitlab-runner/config.toml:/etc/gitlab-runner/config.toml --net=host -v /home/mace/docker-ssh-keys:/root/.ssh cr.d.xiaomi.net/mace/gitlab-runner
 ```
 
 5. Create and set deploy key in your project (For the 1st time)
+
 ```sh
 ssh-keygen
 cat ~/.ssh/id_ras.pub
 ```
 
 6. Register as gitlab ci runner (Follows the instruction in project Settings/Pipelines page)
+
 ```sh
 docker exec -it mace-dev-runner gitlab-runner register
 # Please enter the gitlab-ci tags for this runner (comma separated):
