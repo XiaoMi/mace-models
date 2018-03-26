@@ -2,7 +2,7 @@ MACE Model Zoo
 =====
 [![build status](http://v9.git.n.xiaomi.com/deep-computing/mace-models/badges/master/build.svg)](http://v9.git.n.xiaomi.com/deep-computing/mace-models/commits/master)
 
-This folder contains MACE models deployment configurations.
+This project hosts MACE models deployment configurations.
 
 Introduction
 ---
