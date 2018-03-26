@@ -65,6 +65,7 @@ docker exec -it mace-dev-runner gitlab-runner register
 ```
 
 7. Config auto register after runner host reboot
+
 ```
 sudo chmod +x /etc/rc.local
 
