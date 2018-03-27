@@ -75,7 +75,7 @@ docker exec -it mace-dev-runner gitlab-runner register
 ```
 sudo chmod +x /etc/rc.local
 
-echo '#!/bin/bash
+sudo echo '#!/bin/bash
 
 # Waiting for fdsfuse dependencies
 sleep 10
