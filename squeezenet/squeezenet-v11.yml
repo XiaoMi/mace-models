@@ -17,4 +17,3 @@ models:
     dsp_mode: 0
     obfuscate: 1
     fast_conv: 0
-    skip_validation: 1
