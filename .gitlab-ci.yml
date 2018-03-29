@@ -1,5 +1,14 @@
 stages:
+  - prerequisites
   - release
+
+prerequisites:
+  stage: release
+  only:
+    - master
+  script:
+    - pip install --upgrade sh
+    - pip install --upgrade tensorflow
 
 release:
   stage: release
