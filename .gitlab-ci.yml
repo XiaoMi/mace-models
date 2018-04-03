@@ -29,7 +29,7 @@ release:
     # Build only the changed files in the last 1 or 2 commits for the default trigger
     - if [ -n "$TARGET_FILE_PATTERN" ]; then GET_MODEL_FILES_CMD="find $MODEL_ROOT_PATH -name *.yml"; else GET_MODEL_FILES_CMD="cd $MODEL_ROOT_PATH; git diff-tree --no-commit-id --name-only -r $LAST_VALID_COMMIT_ID | xargs -L 1 basename | { grep ".yml" || true; } |  xargs -L 1 -I {} find $MODEL_ROOT_PATH -name {}"; fi
     - if [ -z "$TARGET_SOCS" ]; then TARGET_SOCS=all; fi
-    - sh -c "$GET_MODEL_FILES_CMD" | { grep -v ".gitlab-ci.yml" || true; } | { grep "$TARGET_FILE_PATTERN" || true; } | xargs -L 1 -I {} python tools/mace_tools.py --config="{}" --tuning=true --mode=all --round=10 --output_dir=$CI_PROJECT_OUTPUT_PATH --socs=$TARGET_SOCS
+    - sh -c "$GET_MODEL_FILES_CMD" | { grep -v ".gitlab-ci.yml" || true; } | { grep "$TARGET_FILE_PATTERN" || true; } | xargs -L 1 -I {} python tools/mace_tools.py --config="{}" --tuning=true --mode=all --round=10 --output_dir=$CI_PROJECT_OUTPUT_PATH --target_socs=$TARGET_SOCS
     - popd
     - popd
     - rm -rf $MACE_WORK_DIR
