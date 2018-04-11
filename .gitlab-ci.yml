@@ -7,8 +7,7 @@ prerequisites:
   only:
     - master
   script:
-    - pip install --upgrade sh
-    - pip install --upgrade tensorflow
+    - echo $PATH
 
 release:
   stage: release
