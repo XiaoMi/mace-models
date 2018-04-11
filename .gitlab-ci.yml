@@ -16,6 +16,7 @@ release:
   only:
     - master
   script:
+    - sed -i "s/docker run -d -it/docker run -d -i/g" tools/validate_tools.sh
     - env
     - CI_PROJECT_OUTPUT_PATH=/mace-build-output/$CI_PROJECT_NAME/$CI_BUILD_ID
     - mkdir -p $CI_PROJECT_OUTPUT_PATH
