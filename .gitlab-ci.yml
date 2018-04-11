@@ -8,6 +8,8 @@ prerequisites:
     - master
   script:
     - echo $PATH
+    - which docker
+    - docker ps
 
 release:
   stage: release
