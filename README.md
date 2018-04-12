@@ -71,7 +71,7 @@ sudo echo '#!/bin/bash
 # Waiting for fdsfuse dependencies
 sleep 10
 sudo XIAOMI_ACCESS_KEY_ID=XXXXXXXX XIAOMI_SECRET_ACCESS_KEY=XXXXXXXX XIAOMI_FDS_ENDPOINT=cnbj1-inner-fds.api.xiaomi.net fdsfuse mace-build-output /fds -o use_cache=/fdscache
-docker run --name mace-dev-runner -it -d --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /fds/:/mace-build-output -v /dev/bus/usb:/dev/bus/usb -v /home/mace/gitlab-runner/config.toml:/etc/gitlab-runner/config.toml --net=host -v /home/mace/docker-ssh-keys:/root/.ssh cr.d.xiaomi.net/mace/gitlab-runner
+docker run --name mace-dev-runner -it -d --rm --privileged -v /usr/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock -v /fds/:/mace-build-output -v /dev/bus/usb:/dev/bus/usb -v /home/mace/gitlab-runner/config.toml:/etc/gitlab-runner/config.toml --net=host -v /home/mace/docker-ssh-keys:/root/.ssh cr.d.xiaomi.net/mace/gitlab-runner
 exit 0
 ' > /etc/rc.local
 ```
