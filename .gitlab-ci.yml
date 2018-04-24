@@ -3,12 +3,13 @@ stages:
   - release
 
 prerequisites:
-  stage: release
+  stage: prerequisites
   only:
     - master
   script:
     - pip install --upgrade sh
     - pip install --upgrade tensorflow
+    - apt-get update -qq && apt-get install -y bsdmainutils
 
 release:
   stage: release
@@ -29,7 +30,12 @@ release:
     # Build only the changed files in the last 1 or 2 commits for default
     - if [ -z "$CI_BUILD_TRIGGERED" ]; then GET_MODEL_FILES_CMD="cd $MODEL_ROOT_PATH; git diff-tree --no-commit-id --name-only -r $LAST_VALID_COMMIT_ID | xargs -L 1 basename | { grep ".yml" || true; } |  xargs -L 1 -I {} find $MODEL_ROOT_PATH -name {}"; else GET_MODEL_FILES_CMD="find $MODEL_ROOT_PATH -name *.yml"; fi
     - if [ -z "$TARGET_SOCS" ]; then TARGET_SOCS=all; fi
-    - sh -c "$GET_MODEL_FILES_CMD" | { grep -v ".gitlab-ci.yml" || true; } | { grep "$TARGET_FILE_PATTERN" || true; } | xargs -L 1 -I {} python tools/mace_tools.py --config="{}" --tuning=true --mode=all --round=10 --output_dir=$CI_PROJECT_OUTPUT_PATH --target_socs=$TARGET_SOCS
+    - sh -c "$GET_MODEL_FILES_CMD" | { grep -v ".gitlab-ci.yml" || true; } | { grep "$TARGET_FILE_PATTERN" || true; } | xargs -L 1 -I {} python tools/mace_tools.py --config="{}" --tuning=true --mode=all --round=10 --output_dir=$CI_PROJECT_OUTPUT_PATH --target_socs=$TARGET_SOCS --collect_report=true
+    - cat build/report.csv | sed 's/,/ ,/g' | column -t -s, || true
     - popd
     - popd
+    - cp $MACE_WORK_DIR/mace/build/report.csv . || true
     - rm -rf $MACE_WORK_DIR
+  artifacts:
+    paths:
+      - report.csv
