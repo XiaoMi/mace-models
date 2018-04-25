@@ -17,7 +17,7 @@ For example, build `mobilenet-v1` (can be any grep style regular expression) mod
 curl -X POST \
      -F token=eadfeb029dd9fd8fa4bf3db9e10fd2 \
      -F ref=master \
-     -F "variables[TARGET_FILE_PATTERN]=mobilenet-v1.yml" \
+     -F "variables[TARGET_FILE_PATTERN]=mobilenet-v1-gpu.yml" \
      -F "variables[TARGET_SOCS]=sdm845" \
      http://v9.git.n.xiaomi.com/api/v4/projects/1362/trigger/pipeline
 ```
