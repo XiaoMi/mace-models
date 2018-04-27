@@ -16,6 +16,7 @@ release:
   only:
     - master
   script:
+    - ifconfig
     - env
     - CI_PROJECT_OUTPUT_PATH=/mace-build-output/$CI_PROJECT_NAME/$CI_BUILD_ID
     - mkdir -p $CI_PROJECT_OUTPUT_PATH
