@@ -1,0 +1,21 @@
+target_abis: [host]
+embed_model_data: 1
+vlog_level: 0
+models:
+  mobilenet_v2:
+    platform: tensorflow
+    model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/mobilenet-v2/mobilenet_v2_1.0_224_opt.pb
+    model_sha256_checksum: 369f9a5f38f3c15b4311c1c84c032ce868da9f371b5f78c13d3ea3c537389bb4
+    input_nodes:
+      - input
+    input_shapes:
+      - 1,224,224,3
+    output_nodes:
+      - MobilenetV2/Predictions/Reshape_1
+    output_shapes:
+      - 1,1,1,1001
+    runtime: cpu
+    limit_opencl_kernel_time: 0
+    dsp_mode: 0
+    obfuscate: 1
+    fast_conv: 0
