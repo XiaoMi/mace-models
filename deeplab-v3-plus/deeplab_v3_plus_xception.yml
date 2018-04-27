@@ -1,7 +1,7 @@
 target_abis: [armeabi-v7a]
 embed_model_data: 0
 models:
-  deeplab_v3_plus:
+  deeplab_v3_plus_xception:
     platform: tensorflow
     model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/deeplab-v3%2B/deeplab-v3%2B.pb
     model_sha256_checksum: 69c220ed7028c0a0276667599cff9d7f71e0f5388a955babcaa74fb09e2fe6ad
