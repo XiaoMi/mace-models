@@ -1,6 +1,5 @@
 target_abis: [armeabi-v7a, arm64-v8a]
 embed_model_data: 0
-vlog_level: 0
 models:
   mobilenet_v1:
     platform: tensorflow

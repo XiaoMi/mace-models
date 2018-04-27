@@ -1,6 +1,5 @@
 target_abis: [armeabi-v7a]
 embed_model_data: 0
-vlog_level: 0
 models:
   deeplab_v3_plus:
     platform: tensorflow

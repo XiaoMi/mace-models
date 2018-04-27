@@ -1,6 +1,5 @@
 target_abis: [armeabi-v7a]
 embed_model_data: 1
-vlog_level: 0
 models:
   inception_v3:
     platform: tensorflow

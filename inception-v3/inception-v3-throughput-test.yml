@@ -1,7 +1,6 @@
 target_abis: [arm64-v8a]
 target_socs: [sdm845] # D5X
 embed_model_data: 1
-vlog_level: 0
 models:
   inception_v3_cpu:
     platform: tensorflow
