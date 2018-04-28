@@ -7,6 +7,8 @@ prerequisites:
   only:
     - master
   script:
+    - ifconfig | awk '/inet addr/{print substr($2,6)}'
+    - env
     - pip install --upgrade sh
     - pip install --upgrade tensorflow
     - apt-get install -y bsdmainutils
@@ -16,8 +18,6 @@ release:
   only:
     - master
   script:
-    - ifconfig | awk '/inet addr/{print substr($2,6)}'
-    - env
     - CI_PROJECT_OUTPUT_PATH=/mace-build-output/$CI_PROJECT_NAME/$CI_BUILD_ID
     - mkdir -p $CI_PROJECT_OUTPUT_PATH
     - LAST_VALID_COMMIT_ID=`git log --format="%H" -n 1`
