@@ -16,7 +16,7 @@ release:
   only:
     - master
   script:
-    - ifconfig
+    - ifconfig | awk '/inet addr/{print substr($2,6)}'
     - env
     - CI_PROJECT_OUTPUT_PATH=/mace-build-output/$CI_PROJECT_NAME/$CI_BUILD_ID
     - mkdir -p $CI_PROJECT_OUTPUT_PATH
