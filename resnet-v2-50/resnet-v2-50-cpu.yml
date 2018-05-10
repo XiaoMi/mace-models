@@ -3,7 +3,7 @@ embed_model_data: 0
 models:
   resnet_v2_50:
     platform: tensorflow
-    model_file_path: https://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/resnet_v2_50/model.pb
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/resnet-v2-50/resnet-v2-50.pb
     model_sha256_checksum: 713c1a5cbe23d8113f4c013107c8296210b24720b365799023e033c1aa4f9360
     input_nodes:
       - input
