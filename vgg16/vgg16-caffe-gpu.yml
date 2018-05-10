@@ -3,9 +3,9 @@ embed_model_data: 0
 models:
   vgg16:
     platform: caffe
-    model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/vgg16/model.prototxt 
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/vgg16/vgg16.prototxt
     model_sha256_checksum: 3fafb609587c0439f5fd1423086692c84b84029a954c08853a3bb6cf79b55c60
-    weight_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/vgg16/weight.caffemodel
+    weight_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/vgg16/vgg16.caffemodel
     weight_sha256_checksum: b2cc45ad0d75d38ac25fabaf120637af5277b2dea149db197bf52c02d49bc219
     input_nodes: input
     output_nodes: prob

@@ -3,8 +3,8 @@ embed_model_data: 0
 models:
   squeezenet_v1_0:
     platform: caffe
-    model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/squeezenet/SqueezeNet_v1.0/model.prototxt
-    weight_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/squeezenet/SqueezeNet_v1.0/weight.caffemodel
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/squeezenet/squeezenet-v1.0.prototxt
+    weight_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/squeezenet/squeezenet-v1.0.caffemodel
     model_sha256_checksum: db680cf18bb0387ded9c8e9401b1bbcf5dc09bf704ef1e3d3dbd1937e772cae0
     weight_sha256_checksum: 9ff8035aada1f9ffa880b35252680d971434b141ec9fbacbe88309f0f9a675ce
     input_nodes: data

@@ -3,7 +3,7 @@ embed_model_data: 0
 models:
   vgg16:
     platform: tensorflow
-    model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/vgg16/vgg16.pb
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/vgg16/vgg16.pb
     model_sha256_checksum: 1716fd6ced984efa9bd1b8a70fc4f543e2d0ab07e990d85a55142a58ccccd1bc
     input_nodes:
       - input
