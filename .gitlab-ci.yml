@@ -19,6 +19,7 @@ release:
     - master
   script:
     - CI_PROJECT_OUTPUT_PATH=/mace-build-output/$CI_PROJECT_NAME/$CI_PIPELINE_ID
+    - rm -rf $CI_PROJECT_OUTPUT_PATH
     - mkdir -p $CI_PROJECT_OUTPUT_PATH
     - LAST_VALID_COMMIT_ID=`git log --format="%H" -n 1`
     - LAST_VALID_COMMIT_FILE_NUM=`git diff-tree --no-commit-id --name-only -r $LAST_VALID_COMMIT_ID | wc -l`
