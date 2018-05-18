@@ -1,0 +1,21 @@
+target_abis: [armeabi-v7a]
+target_socs: [sdm845]
+embed_model_data: 0
+models:
+  inception_v3_dsp:
+    platform: tensorflow
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/inception-v3/inception_v3_q_without_softmax.pb
+    model_sha256_checksum: a86467be663cff78e5c60cf284770d94a7d5390e5124fbf06b9813fea952a621
+    input_nodes:
+      - input
+    input_shapes:
+      - 1,299,299,3
+    output_nodes:
+      - InceptionV3/Logits/Conv2d_1c_1x1/BiasAdd
+    output_shapes:
+      - 1,1,1,1001
+    runtime: dsp
+    limit_opencl_kernel_time: 0
+    dsp_mode: 4
+    obfuscate: 0
+    fast_conv: 0
