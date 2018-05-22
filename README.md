@@ -1,4 +1,4 @@
-MiAI Model Zoo
+MiAI Compute Engine Model Zoo
 ==============
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![build status](http://v9.git.n.xiaomi.com/deep-computing/mace-models/badges/master/build.svg)](http://v9.git.n.xiaomi.com/deep-computing/mace-models/commits/master)
@@ -22,3 +22,6 @@ curl -X POST \
      -F "variables[TARGET_SOCS]=sdm845" \
      http://v9.git.n.xiaomi.com/api/v4/projects/1362/trigger/pipeline
 ```
+
+## License
+[Apache License 2.0](LICENSE).
