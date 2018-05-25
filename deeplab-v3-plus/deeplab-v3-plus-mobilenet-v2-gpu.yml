@@ -1,0 +1,17 @@
+target_abis: [armeabi-v7a]
+embed_model_data: 1
+models:
+  deeplab-v3-plus-mobilenet-v2:
+    platform: tensorflow
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/deeplab-v3-plus/deeplab-v3-plus-mobilenet-v2.pb
+    model_sha256_checksum: 0299ad261a2455e687b9c80acb815db1e62ccc38ec1ba5166783271bd150f316
+    input_nodes: sub_7
+    output_nodes: ResizeBilinear_2
+    input_shapes: 1,513,513,3
+    output_shapes: 1,65,65,21
+    runtime: gpu
+    limit_opencl_kernel_time: 0
+    dsp_mode: 0
+    obfuscate: 1
+    fast_conv: 0
+

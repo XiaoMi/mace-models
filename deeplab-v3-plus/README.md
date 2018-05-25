@@ -1,6 +1,11 @@
-# deeplab-v3+ tensorflow models
+deeplab-v3-plus-mobilenet-v2 model
+=====
 
-1. xception: [deeplab-v3+ with xception](http://download.tensorflow.org/models/deeplabv3_xception_2018_01_04.tar.gz).
+This folder contains deeplab v3+ mobilenet v2 model deployment configurations.
 
-## References
-1. [tensorflow deeplab model zoo](https://github.com/tensorflow/models/blob/master/research/deeplab/g3doc/model_zoo.md)
+Introduction
+---
+The original pretrained model is [here](http://download.tensorflow.org/models/deeplabv3_mnv2_pascal_train_aug_2018_01_29.tar.gz) (mobilenetv2_coco_voc_trainaug)
+
+In order to facilitate model optimization, we use fixed-shape nodes of input and output.
+
