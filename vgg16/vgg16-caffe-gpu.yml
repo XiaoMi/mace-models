@@ -1,5 +1,8 @@
+library_name: vgg16-caffe-gpu
 target_abis: [armeabi-v7a]
+target_socs: [all]
 embed_model_data: 0
+build_type: code
 models:
   vgg16:
     platform: caffe
@@ -7,10 +10,11 @@ models:
     model_sha256_checksum: 3fafb609587c0439f5fd1423086692c84b84029a954c08853a3bb6cf79b55c60
     weight_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/vgg16/vgg16.caffemodel
     weight_sha256_checksum: b2cc45ad0d75d38ac25fabaf120637af5277b2dea149db197bf52c02d49bc219
-    input_nodes: data
-    output_nodes: prob
-    input_shapes: 1,224,224,3
-    output_shapes: 1,1,1,1000
+    subgraphs:
+      - input_tensors: data
+        output_tensors: prob
+        input_shapes: 1,224,224,3
+        output_shapes: 1,1,1,1000
     runtime: gpu
     limit_opencl_kernel_time: 0
     dsp_mode: 0

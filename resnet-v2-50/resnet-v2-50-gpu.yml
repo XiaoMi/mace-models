@@ -1,18 +1,22 @@
+library_name: resnet-v2-50-gpu
 target_abis: [armeabi-v7a]
+target_socs: [all]
 embed_model_data: 1
+build_type: code
 models:
   resnet_v2_50:
     platform: tensorflow
     model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/resnet-v2-50/resnet-v2-50.pb
     model_sha256_checksum: 713c1a5cbe23d8113f4c013107c8296210b24720b365799023e033c1aa4f9360
-    input_nodes:
-      - input
-    output_nodes:
-      - resnet_v2_50/predictions/Reshape_1
-    input_shapes:
-      - 1,299,299,3
-    output_shapes:
-      - 1,1,1,1001
+    subgraphs:
+      - input_tensors:
+          - input
+        output_tensors:
+          - resnet_v2_50/predictions/Reshape_1
+        input_shapes:
+          - 1,299,299,3
+        output_shapes:
+          - 1,1,1,1001
     runtime: gpu
     limit_opencl_kernel_time: 0
     dsp_mode: 4
