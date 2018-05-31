@@ -1,5 +1,8 @@
+library_name: squeezenet-v11-gpu
 target_abis: [armeabi-v7a]
+target_socs: [all]
 embed_model_data: 0
+build_type: code
 models:
   squeezenet_v1_1:
     platform: caffe
@@ -7,10 +10,11 @@ models:
     weight_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/squeezenet/squeezenet-v1.1.caffemodel
     model_sha256_checksum: 625c952063da1569e22d2f499dc454952244d42cd8feca61f05502566e70ae1c
     weight_sha256_checksum: 72b912ace512e8621f8ff168a7d72af55910d3c7c9445af8dfbff4c2ee960142
-    input_nodes: data
-    output_nodes: prob
-    input_shapes: 1,227,227,3
-    output_shapes: 1,1,1,1000
+    subgraphs:
+      - input_tensors: data
+        output_tensors: prob
+        input_shapes: 1,227,227,3
+        output_shapes: 1,1,1,1000
     runtime: gpu
     limit_opencl_kernel_time: 0
     dsp_mode: 0
