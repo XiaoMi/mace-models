@@ -6,17 +6,17 @@ build_type: code
 models:
   inception_v3_dsp:
     platform: tensorflow
-    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/inception-v3/inception_v3_q_without_softmax.pb
-    model_sha256_checksum: a86467be663cff78e5c60cf284770d94a7d5390e5124fbf06b9813fea952a621
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/inception-v3/inception_v3_q_2015.pb
+    model_sha256_checksum: 0f16dd7a72f59d317261af6e522af82b6d161d46671d8413871751bc16dd0037
     subgraphs:
       - input_tensors:
-          - input
+          - Mul
         input_shapes:
           - 1,299,299,3
         output_tensors:
-          - InceptionV3/Logits/Conv2d_1c_1x1/BiasAdd
+          - softmax
         output_shapes:
-          - 1,1,1,1001
+          - 1,1,1,1008
         validation_inputs_data:
           - https://cnbj1.fds.api.xiaomi.com/mace/inputs/keyboard_299x299.bin
     runtime: dsp
