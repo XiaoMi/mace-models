@@ -16,7 +16,7 @@ models:
         output_tensors:
           - MobilenetV1/Predictions/Reshape_1
         output_shapes:
-          - 1,1,1,1001
+          - 1,1001
         validation_inputs_data:
           - https://cnbj1.fds.api.xiaomi.com/mace/inputs/dog.npy
     runtime: gpu
