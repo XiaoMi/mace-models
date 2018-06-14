@@ -3,7 +3,7 @@ target_abis: [host]
 embed_model_data: 1
 build_type: code
 models:
-  mobilenet_v2:
+  mobilenet_v2_host:
     platform: tensorflow
     model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/mobilenet-v2/mobilenet-v2-1.0.pb
     model_sha256_checksum: 369f9a5f38f3c15b4311c1c84c032ce868da9f371b5f78c13d3ea3c537389bb4
