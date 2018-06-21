@@ -1,13 +1,13 @@
-library_name: fast_style_transfer_udnie
+library_name: fast_style_transfer_wave
 target_abis: [armeabi-v7a, arm64-v8a]
 target_socs: [all]
 embed_model_data: 0
 build_type: proto
 models: 
-  fast_style_transfer_udnie:
+  fast_style_transfer_wave:
     platform: tensorflow
-    model_file_path: http://cnbj1.fds.api.xiaomi.com/mace/miai-models/fast-style-transfer/udnie.pb
-    model_sha256_checksum: 636fa213d4c62a8bbad6c9f88a87b89fbe675a8c55a74da514cbf2c252ae6e68
+    model_file_path: http://cnbj1.fds.api.xiaomi.com/mace/miai-models/fast-style-transfer/wave.pb
+    model_sha256_checksum: efcd17a20368f45cad9d644d9168c6dad2b33be05c7fa4bb504d78deb00e28c9
     subgraphs:
       - input_tensors: img_placeholder
         input_shapes: 1,480,640,3
