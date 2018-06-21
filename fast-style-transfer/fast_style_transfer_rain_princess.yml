@@ -4,7 +4,7 @@ target_socs: [all]
 embed_model_data: 0
 build_type: proto
 models: 
-  fast-style-transfer-rain_pricess:
+  fast_style_transfer_rain_pricess:
     platform: tensorflow
     model_file_path: http://cnbj1.fds.api.xiaomi.com/mace/miai-models/fast-style-transfer/rain_princess.pb
     model_sha256_checksum: babca8d5a179a13db7e9496a6afd8dba430232c8455fe636b94ab74259ae87c1
