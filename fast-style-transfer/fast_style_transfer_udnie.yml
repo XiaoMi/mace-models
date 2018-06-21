@@ -4,7 +4,7 @@ target_socs: [all]
 embed_model_data: 0
 build_type: proto
 models: 
-  fast-style-transfer-udnie:
+  fast_style_transfer_udnie:
     platform: tensorflow
     model_file_path: http://cnbj1.fds.api.xiaomi.com/mace/miai-models/fast-style-transfer/udnie.pb
     model_sha256_checksum: 636fa213d4c62a8bbad6c9f88a87b89fbe675a8c55a74da514cbf2c252ae6e68
