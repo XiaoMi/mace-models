@@ -22,5 +22,3 @@ Styles and results:
 | [rain_princess](imgs/style/rain_princess.jpg) | ![](imgs/tf-results/chicago_rain_princess.jpg)|  ![](imgs/mace-results/chicago_rain_princess.jpg)  |
 | [scream](imgs/style/the_scream.jpg) | ![](imgs/tf-results/chicago_scream.jpg)|  ![](imgs/mace-results/chicago_scream.jpg)  |
 | [udnie](imgs/style/udnie.jpg) | ![](imgs/tf-results/chicago_udnie.jpg)|  ![](imgs/mace-results/chicago_udnie.jpg)  |
-| [wave](imgs/style/wave.jpg) | ![](imgs/tf-results/chicago_wave.jpg)|  ![](imgs/mace-results/chicago_wave.jpg)  |
-| [wreck](imgs/style/the_shipwreck_of_the_minotaur.jpg) | ![](imgs/tf-results/chicago_wreck.jpg)|  ![](imgs/mace-results/chicago_wreck.jpg)  |

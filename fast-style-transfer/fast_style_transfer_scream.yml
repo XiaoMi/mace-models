@@ -16,7 +16,6 @@ models:
         validation_inputs_data:
           - http://cnbj1.fds.api.xiaomi.com/mace/inputs/chicago480x640.npy
     runtime: cpu+gpu
-    data_type: fp32_fp32
     limit_opencl_kernel_time: 0
     dsp_mode: 0
     obfuscate: 1
