@@ -4,7 +4,7 @@ target_socs: [all]
 embed_model_data: 0
 build_type: code
 models:
-  squeezenet_v1_1:
+  squeezenet_v11:
     platform: caffe
     model_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/squeezenet/SqueezeNet_v1.1/model.prototxt
     weight_file_path: http://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/squeezenet/SqueezeNet_v1.1/weight.caffemodel
