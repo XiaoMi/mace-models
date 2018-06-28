@@ -1,7 +1,7 @@
 MACE Model Zoo
 ==============
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![build status](http://v9.git.n.xiaomi.com/deep-computing/mace-models/badges/master/build.svg)](http://v9.git.n.xiaomi.com/deep-computing/mace-models/commits/master)
+[![pipeline status](https://gitlab.com/llhe/mace-models/badges/master/pipeline.svg)](https://gitlab.com/llhe/mace-models/pipelines)
 
 This project hosts Mobile AI Compute Engine (MACE) models.
 
