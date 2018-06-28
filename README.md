@@ -1,5 +1,7 @@
-MACE Model Zoo
-==============
+<div  align="left">
+<img src="mace-model-zoo-logo.png" width = "600" alt="MACE Model Zoo" />
+</div>
+
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![pipeline status](https://gitlab.com/llhe/mace-models/badges/master/pipeline.svg)](https://gitlab.com/llhe/mace-models/pipelines)
 
