@@ -37,7 +37,7 @@ release:
     - CONF_FILES_STR=`sh -c "$GET_MODEL_FILES_CMD" | { grep -v ".gitlab-ci.yml" || true; } | { grep "$TARGET_FILE_PATTERN" || true; }`
     - CONF_FILES=(${CONF_FILES_STR// / })
     - echo $CONF_FILES
-    - if [ -n "$CONF_FILES_STR" ]; then for CONF_FILE in "${CONF_FILES[@]}"; do sh -c "python tools/converter.py build --config=${CONF_FILE} && python tools/converter.py run --config=${CONF_FILE} --round=10 --report --report_dir=$CI_PROJECT_OUTPUT_PATH --validate" || exit 1; done; fi
+    - if [ -n "$CONF_FILES_STR" ]; then for CONF_FILE in "${CONF_FILES[@]}"; do sh -c "python tools/converter.py build --config=${CONF_FILE} --target_socs=all && python tools/converter.py run --config=${CONF_FILE} --target_socs=all --round=10 --report --report_dir=$CI_PROJECT_OUTPUT_PATH --validate" || exit 1; done; fi
     - popd
     - popd
     - if [ -f $CI_PROJECT_OUTPUT_PATH/report.csv ]; then cp $CI_PROJECT_OUTPUT_PATH/report.csv .; cat report.csv | sed 's/,/ ,/g' | column -t -s,; fi

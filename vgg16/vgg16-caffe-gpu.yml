@@ -1,6 +1,5 @@
 library_name: vgg16-caffe-gpu
 target_abis: [armeabi-v7a]
-target_socs: [all]
 embed_model_data: 0
 build_type: code
 models:
