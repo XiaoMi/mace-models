@@ -1,6 +1,5 @@
 library_name: fast_style_transfer_scream
 target_abis: [armeabi-v7a, arm64-v8a]
-target_socs: [all]
 embed_model_data: 0
 build_type: proto
 models: 
