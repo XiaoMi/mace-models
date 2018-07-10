@@ -1,7 +1,7 @@
 library_name: fast_style_transfer_scream
 target_abis: [armeabi-v7a, arm64-v8a]
-embed_model_data: 0
-build_type: proto
+model_graph_format: file
+model_data_format: file
 models: 
   fast_style_transfer_scream: 
     platform: tensorflow

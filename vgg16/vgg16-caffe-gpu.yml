@@ -1,7 +1,7 @@
 library_name: vgg16-caffe-gpu
 target_abis: [armeabi-v7a]
-embed_model_data: 0
-build_type: code
+model_graph_format: file
+model_data_format: file
 models:
   vgg16_caffe_gpu:
     platform: caffe
