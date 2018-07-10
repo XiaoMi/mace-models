@@ -1,7 +1,7 @@
 library_name: mobilenet-v2-host
 target_abis: [host]
-embed_model_data: 1
-build_type: code
+model_graph_format: file
+model_data_format: file
 models:
   mobilenet_v2_host:
     platform: tensorflow
@@ -20,4 +20,4 @@ models:
     limit_opencl_kernel_time: 0
     dsp_mode: 0
     obfuscate: 1
-    fast_conv: 0
+    winograd: 0

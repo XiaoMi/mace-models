@@ -1,7 +1,7 @@
 library_name: vgg16-tensorflow-cpu
 target_abis: [armeabi-v7a, arm64-v8a]
-embed_model_data: 0
-build_type: code
+model_graph_format: code 
+model_data_format: file
 models:
   vgg16:
     platform: tensorflow

@@ -1,8 +1,8 @@
 library_name: inception-v3-dsp
 target_abis: [armeabi-v7a]
 target_socs: [sdm845]
-embed_model_data: 0
-build_type: code
+model_graph_format: file
+model_data_format: file
 models:
   inception_v3_dsp:
     platform: tensorflow
