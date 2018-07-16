@@ -9,7 +9,6 @@ prerequisites:
   script:
     - ifconfig | awk '/inet addr/{print substr($2,6)}'
     - pip install --upgrade sh
-    - pip install --upgrade tensorflow
     - apt-get install -y bsdmainutils
 
 release:
