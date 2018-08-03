@@ -17,7 +17,7 @@ models:
         output_shapes:
           - 1,96,96,14
         validation_threshold:
-          cpu: 0.9
-          gpu: 0.9
+          cpu: 0.8
+          gpu: 0.8
     runtime: cpu+gpu
     winograd: 0
