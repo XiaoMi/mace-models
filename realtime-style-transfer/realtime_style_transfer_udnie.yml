@@ -1,0 +1,21 @@
+library_name: realtime_style_transfer_udnie
+target_abis: [armeabi-v7a]
+model_graph_format: file
+model_data_format: file
+models: 
+  femme: 
+    platform: tensorflow
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/realtime_style_transfer/rtst_udnie.pb
+    model_sha256_checksum: c7c0576f2b4b38b1363c8027d5620163e72a288aa0873e181d17acfbfa6a208c
+    subgraphs:
+      - input_tensors: img_placeholder
+        input_shapes: 1,480,640,3
+        output_tensors: add_22
+        output_shapes: 1,480,640,3
+        validation_inputs_data:
+          - http://cnbj1.fds.api.xiaomi.com/mace/inputs/chicago480x640.npy
+    runtime: gpu
+    limit_opencl_kernel_time: 0
+    dsp_mode: 0
+    obfuscate: 1
+    winograd: 4
