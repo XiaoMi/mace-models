@@ -40,7 +40,7 @@ release:
       if [ -n "$CONF_FILES_STR" ]; then
         for CONF_FILE in "${CONF_FILES[@]}"; do
           if grep -q target_socs ${CONF_FILE}; then
-            sh -c "python tools/converter.py convert --config=${CONF_FILE} && python tools/converter.py run --config=${CONF_FILE} --round=10 --report --report_dir=$CI_PROJECT_OUTPUT_PATH --validate" || exit 1
+            echo "python tools/converter.py convert --config=${CONF_FILE} && python tools/converter.py run --config=${CONF_FILE} --round=10 --report --report_dir=$CI_PROJECT_OUTPUT_PATH --validate" || exit 1
           else
             sh -c "python tools/converter.py convert --config=${CONF_FILE} --target_socs=all && python tools/converter.py run --config=${CONF_FILE} --target_socs=all --round=10 --report --report_dir=$CI_PROJECT_OUTPUT_PATH --validate" || exit 1
           fi
