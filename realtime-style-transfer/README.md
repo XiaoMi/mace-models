@@ -53,14 +53,14 @@ Styles and results:
 ## Other examples 
 
  
- | input | femme | udnie | wave | wreck | la_muse | scream |
- | :-----: | :-------: | :-----: | :-----: | :------: | :---------: | :-------: |
- | styles | <img src="imgs/styles/femme.jpg" width="320"/> | <img src="imgs/styles/udnie.jpg" width="320"/> | <img src="imgs/styles/wave.jpg" width="320"/> | <img src="imgs/styles/the_shipwreck_of_the_minotaur.jpg" width="320"/> | <img src="imgs/styles/la_muse.jpg" width="320"> | <img src="imgs/styles/the_scream.jpg" width="320"> |
-| ![](imgs/inputs/areuok.jpg)  | ![](imgs/results/femme/areuok.jpg) | ![](imgs/results/udnie/areuok.jpg) | ![](imgs/results/wave/areuok.jpg) | ![](imgs/results/wreck/areuok.jpg) | ![](imgs/results/la_muse/areuok.jpg) | ![](imgs/results/scream/areuok.jpg) |
-|  ![](imgs/inputs/model1.jpg) |  ![](imgs/results/femme/girl1.jpg) |![](imgs/results/udnie/girl1.jpg) |![](imgs/results/wave/girl1.jpg) |![](imgs/results/wreck/girl1.jpg) |![](imgs/results/la_muse/girl1.jpg) |![](imgs/results/scream/girl1.jpg) |
-|  ![](imgs/inputs/model2.jpg)| ![](imgs/results/femme/girl2.jpg) | ![](imgs/results/udnie/girl2.jpg) | ![](imgs/results/wave/girl2.jpg) | ![](imgs/results/wreck/girl2.jpg) | ![](imgs/results/la_muse/girl2.jpg) | ![](imgs/results/scream/girl2.jpg) | 
-|  ![](imgs/inputs/Louvre.jpg)| ![](imgs/results/femme/Louvre.jpg)  | ![](imgs/results/udnie/Louvre.jpg)  | ![](imgs/results/wave/Louvre.jpg)  | ![](imgs/results/wreck/Louvre.jpg)  | ![](imgs/results/la_muse/Louvre.jpg)  | ![](imgs/results/scream/Louvre.jpg)  |
-|  ![](imgs/inputs/mi-office.jpg)| ![](imgs/results/femme/mi-office.jpg)  | ![](imgs/results/udnie/mi-office.jpg)  | ![](imgs/results/wave/mi-office.jpg)  | ![](imgs/results/wreck/mi-office.jpg)  | ![](imgs/results/la_muse/mi-office.jpg)  | ![](imgs/results/scream/mi-office.jpg)  |
+| input | femme | udnie | wave | wreck | la_muse | scream |
+| :---: | :---: | :---: | :--: | :---: | :-----: | :----: |
+| styles | <img src="imgs/styles/femme.jpg" width="320"> | <img src="imgs/styles/udnie.jpg" width="320"> | <img src="imgs/styles/wave.jpg" width="320"> | <img src="imgs/styles/the_shipwreck_of_the_minotaur.jpg" width="320"> | <img src="imgs/styles/la_muse.jpg" width="320"> | <img src="imgs/styles/the_scream.jpg" width="320"> |
+| ![](imgs/inputs/areuok.jpg) | ![](imgs/results/femme/areuok.jpg) | ![](imgs/results/udnie/areuok.jpg) | ![](imgs/results/wave/areuok.jpg) | ![](imgs/results/wreck/areuok.jpg) | ![](imgs/results/la_muse/areuok.jpg) | ![](imgs/results/scream/areuok.jpg) |
+| ![](imgs/inputs/model1.jpg) | ![](imgs/results/femme/girl1.jpg) |![](imgs/results/udnie/girl1.jpg) |![](imgs/results/wave/girl1.jpg) |![](imgs/results/wreck/girl1.jpg) |![](imgs/results/la_muse/girl1.jpg) |![](imgs/results/scream/girl1.jpg) |
+| ![](imgs/inputs/model2.jpg) | ![](imgs/results/femme/girl2.jpg) | ![](imgs/results/udnie/girl2.jpg) | ![](imgs/results/wave/girl2.jpg) | ![](imgs/results/wreck/girl2.jpg) | ![](imgs/results/la_muse/girl2.jpg) | ![](imgs/results/scream/girl2.jpg) | 
+| ![](imgs/inputs/Louvre.jpg) | ![](imgs/results/femme/Louvre.jpg) | ![](imgs/results/udnie/Louvre.jpg) | ![](imgs/results/wave/Louvre.jpg) | ![](imgs/results/wreck/Louvre.jpg)  | ![](imgs/results/la_muse/Louvre.jpg)  | ![](imgs/results/scream/Louvre.jpg)  |
+| ![](imgs/inputs/mi-office.jpg) | ![](imgs/results/femme/mi-office.jpg) | ![](imgs/results/udnie/mi-office.jpg) | ![](imgs/results/wave/mi-office.jpg) | ![](imgs/results/wreck/mi-office.jpg)  | ![](imgs/results/la_muse/mi-office.jpg)  | ![](imgs/results/scream/mi-office.jpg)  |
 
 <!--
  | input | femme| udnie | wave | wreck | la_muse | scream |
