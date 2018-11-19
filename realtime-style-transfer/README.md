@@ -13,7 +13,7 @@ Compared to the original fast style transfer:
 - tiny(90kB): 98% model size compression from fast style transfer(6.7MB).
 - easier to deploy: support variable input size.
 
-And we used a step-traning method to train this model with different params in different step. We have put the step-training code [here](https://github.com/lengstrom/fast-style-transfer/pull/175)(step-training).
+We used a step-traning method to train this model,  and the step-training codes are [here](https://github.com/TonyMou/fast-style-transfer/tree/support-step-training)(step-training).
 
 
 Benchmark:
@@ -52,9 +52,10 @@ Styles and results:
 
 ## Other examples 
 
- | input | femme| udnie | wave | wreck | la_muse | scream |
- | :---:  | :---:  | :---: | :---: | :---: | :---: | :---: |
- | style  | <img src="imgs/styles/femme.jpg" width="320"> | <img src="imgs/styles/udnie.jpg" width="320"> | <img src="imgs/styles/wave.jpg" width="320"> | <img src="imgs/styles/the_shipwreck_of_the_minotaur.jpg" width="320"> | <img src="imgs/styles/la_muse.jpg" width="320"> | <img src="imgs/styles/the_scream.jpg" width="320"> |
+ 
+ | input | femme | udnie | wave | wreck | la_muse | scream |
+ | :-----: | :-------: | :-----: | :-----: | :------: | :---------: | :-------: |
+ | styles | <img src="imgs/styles/femme.jpg" width="320"/> | <img src="imgs/styles/udnie.jpg" width="320"/> | <img src="imgs/styles/wave.jpg" width="320"/> | <img src="imgs/styles/the_shipwreck_of_the_minotaur.jpg" width="320"/> | <img src="imgs/styles/la_muse.jpg" width="320"> | <img src="imgs/styles/the_scream.jpg" width="320"> |
 | ![](imgs/inputs/areuok.jpg)  | ![](imgs/results/femme/areuok.jpg) | ![](imgs/results/udnie/areuok.jpg) | ![](imgs/results/wave/areuok.jpg) | ![](imgs/results/wreck/areuok.jpg) | ![](imgs/results/la_muse/areuok.jpg) | ![](imgs/results/scream/areuok.jpg) |
 |  ![](imgs/inputs/model1.jpg) |  ![](imgs/results/femme/girl1.jpg) |![](imgs/results/udnie/girl1.jpg) |![](imgs/results/wave/girl1.jpg) |![](imgs/results/wreck/girl1.jpg) |![](imgs/results/la_muse/girl1.jpg) |![](imgs/results/scream/girl1.jpg) |
 |  ![](imgs/inputs/model2.jpg)| ![](imgs/results/femme/girl2.jpg) | ![](imgs/results/udnie/girl2.jpg) | ![](imgs/results/wave/girl2.jpg) | ![](imgs/results/wreck/girl2.jpg) | ![](imgs/results/la_muse/girl2.jpg) | ![](imgs/results/scream/girl2.jpg) | 
