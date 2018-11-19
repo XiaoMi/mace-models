@@ -1,7 +1,7 @@
 realtime style transfer
 =====
 
-This folder contains realtime style transfer examples and benchmark results  on soc-821 and soc-845 GPU.
+This folder contains realtime style transfer examples and benchmark results on Qualcomm Snapdragon 821 and 845.
 
 Introduction
 ---
@@ -18,9 +18,9 @@ And we used a step-traning method to train this model with different params in d
 
 Benchmark:
 ---
-The following is the realtime style transfer running latency on 821 and 845 soc, using gpu runtime.
+The following is the realtime style transfer running latency on Mi5S (Snapdragon 821) and MIX2s (Snapdragon 845), using GPU runtime.
  
-| resolution  | 821(mi5s):ms | 845(mix2s) :ms |
+| Resolution  | 821 (ms) | 845 (ms)|
 | :--------: | :----------: | :------------: |
 | 480x640   | 53.733    | 32.559      |
 | 720x1280   | 161.380  | 96.855      |
