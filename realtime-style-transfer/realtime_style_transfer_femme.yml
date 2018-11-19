@@ -1,0 +1,21 @@
+library_name: realtime_style_transfer_femme
+target_abis: [armeabi-v7a]
+model_graph_format: file
+model_data_format: file
+models: 
+  femme: 
+    platform: tensorflow
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/realtime_style_transfer/rtst_femme.pb
+    model_sha256_checksum: 5bf3a08b5b7610a70ce4e13084c0d9d4a2a2dbad7bec08fa8d7c5e940b5459ea
+    subgraphs:
+      - input_tensors: img_placeholder
+        input_shapes: 1,480,640,3
+        output_tensors: add_22
+        output_shapes: 1,480,640,3
+        validation_inputs_data:
+          - http://cnbj1.fds.api.xiaomi.com/mace/inputs/chicago480x640.npy
+    runtime: gpu
+    limit_opencl_kernel_time: 0
+    dsp_mode: 0
+    obfuscate: 1
+    winograd: 4

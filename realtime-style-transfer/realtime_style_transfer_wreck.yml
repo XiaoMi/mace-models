@@ -1,0 +1,21 @@
+library_name: realtime_style_transfer_wreck
+target_abis: [armeabi-v7a]
+model_graph_format: file
+model_data_format: file
+models: 
+  femme: 
+    platform: tensorflow
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/realtime_style_transfer/rtst_wreck.pb
+    model_sha256_checksum: 77013ec3dc0be144a370c2499110e2d734273a23e1ee114d89360dd52c15f46d
+    subgraphs:
+      - input_tensors: img_placeholder
+        input_shapes: 1,480,640,3
+        output_tensors: add_22
+        output_shapes: 1,480,640,3
+        validation_inputs_data:
+          - http://cnbj1.fds.api.xiaomi.com/mace/inputs/chicago480x640.npy
+    runtime: gpu
+    limit_opencl_kernel_time: 0
+    dsp_mode: 0
+    obfuscate: 1
+    winograd: 4
