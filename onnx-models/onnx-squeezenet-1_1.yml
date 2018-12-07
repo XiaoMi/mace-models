@@ -1,0 +1,19 @@
+library_name: squeezenet-v1_1
+target_abis: [armeabi-v7a, arm64-v8a]
+model_graph_format: file
+model_data_format: file
+models:
+  squeezenet_v1_1:
+    platform: onnx
+    model_file_path: https://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/onnx/squeezenet1.1-opt.onnx?GalaxyAccessKeyId=5151729087601&Expires=9223372036854775807&Signature=l8801pxu67tT2ALXvpHneX7c2KU=
+    model_sha256_checksum: f0eae2f126ea557187e14e834492637e1e6a001fc4959240c96b7d7552c27cb7
+    subgraphs:
+      - input_tensors: data
+        output_tensors: squeezenet0_flatten0_reshape0
+        input_shapes: 1,224,224,3
+        output_shapes: 1,1000
+        backend: caffe2
+    runtime: cpu+gpu
+    limit_opencl_kernel_time: 0
+    nnlib_graph_mode: 0
+    obfuscate: 0
