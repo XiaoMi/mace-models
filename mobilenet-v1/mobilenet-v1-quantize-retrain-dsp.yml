@@ -1,5 +1,6 @@
 library_name: mobilenet-v1-quantize-retrain-dsp
 target_abis: [armeabi-v7a]
+target_socs: [sdm660]
 model_graph_format: file
 model_data_format: file
 models:
