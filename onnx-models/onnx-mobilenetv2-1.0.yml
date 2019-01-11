@@ -5,7 +5,7 @@ model_data_format: file
 models:
   mobilenet:
     platform: onnx
-    model_file_path: https://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/onnx/mobilenetv2-1.0-opt.onnx?GalaxyAccessKeyId=5151729087601&Expires=9223372036854775807&Signature=8sBlk5VlxApOJtfzgn+Fs9QM83M=
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/mobilenetv2-1.0-opt.onnx
     model_sha256_checksum: 21088e250033d97c62f013a2eb99e85cc464d821a88a74e6c3b4821e3916ca45
     subgraphs:
       - input_tensors: data
