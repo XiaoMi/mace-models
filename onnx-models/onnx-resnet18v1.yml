@@ -5,7 +5,7 @@ model_data_format: file
 models:
   resnet18v1:
     platform: onnx
-    model_file_path: https://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/onnx/resnet18v1-opt.onnx?GalaxyAccessKeyId=5151729087601&Expires=9223372036854775807&Signature=YHl+7j6OXCZ92z6u5htplz5tZ4Y=
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/resnet18v1-opt.onnx
     model_sha256_checksum: 96e3b832f63db6a9647b63c9a6f7561a75a74463b15e13a3e2a7d48b774242ef
     subgraphs:
       - input_tensors: data

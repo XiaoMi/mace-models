@@ -5,7 +5,7 @@ model_data_format: file
 models:
   squeezenet_v1_1:
     platform: onnx
-    model_file_path: https://cnbj1-inner-fds.api.xiaomi.net/mace/mace-models/onnx/squeezenet1.1-opt.onnx?GalaxyAccessKeyId=5151729087601&Expires=9223372036854775807&Signature=l8801pxu67tT2ALXvpHneX7c2KU=
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/squeezenet1.1-opt.onnx
     model_sha256_checksum: f0eae2f126ea557187e14e834492637e1e6a001fc4959240c96b7d7552c27cb7
     subgraphs:
       - input_tensors: data
