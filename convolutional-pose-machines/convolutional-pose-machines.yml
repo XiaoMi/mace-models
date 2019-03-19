@@ -5,7 +5,7 @@ model_data_format: code
 models:
   cpm_v1:
     platform: tensorflow
-    model_file_path: https://raw.githubusercontent.com/edvardHua/PoseEstimationForMobile/master/release/cpm_model/model.pb
+    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/cpm/model.pb
     model_sha256_checksum: e9314c15af001cafde741dde93827f646361b3b4cf08131807a8ec91e4e93134
     subgraphs:
       - input_tensors:
