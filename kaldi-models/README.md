@@ -11,7 +11,7 @@ Introduction
 
 MACE already supports most frequently used components in Kaldi and ONNX format models. So we converted most of the open sourced Kaldi models and put them here as examples.
 
-We will also opensource the kaldi-onnx converting tool soon.
+We have also opensourced the [kaldi-onnx](https://github.com/XiaoMi/kaldi-onnx) converting tool.
 
 |   Nnet2 models      | Nnet3 models |
 |  ---------------         | --------- |
