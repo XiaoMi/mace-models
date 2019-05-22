@@ -6,7 +6,7 @@ models:
   librispeech:
     platform: onnx
     model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/nnet2/librispeech_final.onnx
-    model_sha256_checksum: 54acbf99d7d7ae5efdca7510476e1aa2189c07c5775c3ebf2ac1a7922b93aec1
+    model_sha256_checksum: 6131e0c33c94381705d97a276301bbb46ed4f4c96b807d7f9d04c7393db38048
     subgraphs:
       - input_tensors:
           - 0

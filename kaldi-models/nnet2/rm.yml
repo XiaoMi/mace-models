@@ -6,7 +6,7 @@ models:
   rm_nnet4c:
     platform: onnx
     model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/nnet2/rm_nnet4c.onnx
-    model_sha256_checksum: 5082c5b599f2878382b8496c876057332310be619acffb013a8639d1a9946bcc
+    model_sha256_checksum: a42fb3c446871cc468a6cb41505864b1785ed9d14e67aa5162e1efd20d5544c1
     subgraphs:
       - input_tensors:
           - 0

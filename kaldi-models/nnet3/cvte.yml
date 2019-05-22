@@ -6,7 +6,7 @@ models:
   cvte:
     platform: onnx
     model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/nnet3/cvte.onnx
-    model_sha256_checksum: 3de8bf47586818aa6a33738286b3b7ef88bf19aa3036d54bbe7aa4bddd1f8463
+    model_sha256_checksum: 72d6a794f3d460c93ce2cec91d8c30e91c49860e172e020be27705e1a0bfa67d
     subgraphs:
       - input_tensors:
           - input

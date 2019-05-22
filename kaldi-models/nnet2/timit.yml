@@ -6,7 +6,7 @@ models:
   timit:
     platform: onnx
     model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/nnet2/timit_tri4_nnet.onnx
-    model_sha256_checksum: 2e9fafcb480d24a03f7d7dea22985b0fa13e93ccba2c350479026953a0487771
+    model_sha256_checksum: 58e68753e8cbf02101a21d6efd04fd2d2c04874e6292272e40099f1b144257db
     subgraphs:
       - input_tensors:
           - 0

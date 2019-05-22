@@ -6,7 +6,7 @@ models:
   sitw:
     platform: onnx
     model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/nnet3/sitw.onnx
-    model_sha256_checksum: ff8af27b1f24b88af6dc1acf97b33bc334925801d4f8c68cd569dff796a6f956
+    model_sha256_checksum: 020a37c3b82956f2c7dabbf7261f5c83582a6267ff1f2fbfdf81dea7ef9cfae9
     subgraphs:
       - input_tensors:
           - input

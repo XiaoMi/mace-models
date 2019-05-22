@@ -6,7 +6,7 @@ models:
   voxceleb:
     platform: onnx
     model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/nnet3/voxceleb.onnx
-    model_sha256_checksum: 3105bfc9de9f290d984a393039a444a6ff37354da9044f098b0e910a1e50d320
+    model_sha256_checksum: 41d6533f7f05570265f2a21d288f83e2b70e82bc34df264746bbaaa836a2027c
     subgraphs:
       - input_tensors:
           - input

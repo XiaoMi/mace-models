@@ -6,7 +6,7 @@ models:
   fisher_english_8:
     platform: onnx
     model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/nnet2/fisher_english_8_nnet_a.onnx
-    model_sha256_checksum: e27d8147995b0a68e1367d060dc4f41c0f434043992a52548ff961e4e1e87e6c
+    model_sha256_checksum: 2a8c13871069d54741156f2e063b3f8c2b8e7a4241a2c71f18615db5bda0cf82
     subgraphs:
       - input_tensors:
           - 0

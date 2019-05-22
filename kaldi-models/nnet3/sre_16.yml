@@ -6,7 +6,7 @@ models:
   sre16:
     platform: onnx
     model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/nnet3/sre_16.onnx
-    model_sha256_checksum: 2445cc308b44289484a8a53302def4dd4cce838c646b4692022c9366f3b81ee9
+    model_sha256_checksum: 4be52f1bfd443f3df85fc9dbba99fb359c52b3f121750eb91e31ab13707cb60b
     subgraphs:
       - input_tensors:
           - input

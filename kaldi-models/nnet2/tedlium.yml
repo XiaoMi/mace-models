@@ -6,7 +6,7 @@ models:
   tedlium_nnet_ms_sp:
     platform: onnx
     model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/nnet2/tedlium_nnet_ms_sp.onnx
-    model_sha256_checksum: b668cf0cda8cf81fd732023123fe9a01305408bdd643e3d0095f084c89b466ab
+    model_sha256_checksum: b2224b75eb4f0f5a3c23667414ad45d9d2dff8196c28f1e670ac893485ff653e
     subgraphs:
       - input_tensors:
           - 0
