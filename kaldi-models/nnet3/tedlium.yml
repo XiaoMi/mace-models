@@ -6,7 +6,7 @@ models:
   tedlium:
     platform: onnx
     model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/nnet3/tedlium.onnx
-    model_sha256_checksum: cdae96691b58c9107c44503d5b0507010fac590f62e48943fae28e4d226de4a5
+    model_sha256_checksum: d94c52efa6e4981d314dc98d5017da14cb3d3a8b469b10e4bbc060270b33e29f
     subgraphs:
       - input_tensors:
           - input

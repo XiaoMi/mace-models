@@ -6,7 +6,7 @@ models:
   callhome:
     platform: onnx
     model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/nnet3/callhome.onnx
-    model_sha256_checksum: 2a5169f72833a103da4bdc2b49c61abc32b2f50ba6772f604277198bff6ad9aa
+    model_sha256_checksum: 91f6f4088f35ffd6b2e1e8e852136b403a05693310e86c1201c78c1fc7397c1a
     subgraphs:
       - input_tensors:
           - input
