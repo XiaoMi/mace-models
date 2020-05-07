@@ -5,24 +5,24 @@ model_data_format: file
 models:
   stats:
     platform: onnx
-    model_file_path: https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/nnet3/stats.onnx
-    model_sha256_checksum: a9f1a3f1551628d2a9b35a1042ebe75d4fcc7e4edfb1de89a477fda62d7e897e
+    model_file_path: https://cdn.cnbj1.fds.api.mi-img.com/mace/miai-models/onnx/kaldi/nnet3/stats/stats.onnx
+    model_sha256_checksum: aab570cdc095f86dbe892ef0c19962a77351bfd9872f21479c08ec29c9a773e5
     subgraphs:
       - input_tensors:
           - input
         input_shapes:
-          - 1,20,40
+          - 1,106,40
         output_tensors:
           - output.log-softmax
         output_shapes:
-          - 1,20,3
+          - 1,12,3
         backend: kaldi
         input_data_formats: NONE
         output_data_formats: NONE
         validation_inputs_data:
-            - https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/data/kaldi_input_20_40.npy
+            - https://cdn.cnbj1.fds.api.mi-img.com/mace/miai-models/onnx/kaldi/nnet3/stats/data_24_36_46_40.npy
         validation_outputs_data:
-            - https://cnbj1.fds.api.xiaomi.com/mace/miai-models/onnx/kaldi/data/test_stats_20_40_out.npy
+            - https://cdn.cnbj1.fds.api.mi-img.com/mace/miai-models/onnx/kaldi/nnet3/stats/stats_kaldi_out.npy
     runtime: cpu
     limit_opencl_kernel_time: 0
     nnlib_graph_mode: 0

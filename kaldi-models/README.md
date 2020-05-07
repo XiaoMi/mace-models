@@ -17,8 +17,8 @@ We have also opensourced the [kaldi-onnx](https://github.com/XiaoMi/kaldi-onnx) 
 |  ---------------         | --------- |
 | [Fisher English](http://kaldi-asr.org/downloads/build/8/trunk/egs/fisher_english/s5/exp/nnet2_online/nnet_a_online/final.mdl)  | [CVTE](http://kaldi-asr.org/models/m2) |
 | [Librispeech](http://kaldi-asr.org/downloads/build/10/trunk/egs/librispeech/s5/exp/nnet2_online/nnet_ms_a_online/final.mdl) |  [SRE16](http://kaldi-asr.org/models/m3) |
-| [RM](http://kaldi-asr.org/downloads/build/4/trunk/egs/rm/s5/exp/nnet4c_gpu_ali/final.mdl) |[ASpIRE](http://kaldi-asr.org/models/m4)  |
-| [Tedlium](http://kaldi-asr.org/downloads/build/9/trunk/egs/tedlium/s5/exp/nnet2_online/nnet_ms_sp_online/final.mdl) |[Tedlium](http://kaldi-asr.org/models/m5) |
+| [RM](http://kaldi-asr.org/downloads/build/4/trunk/egs/rm/s5/exp/nnet4c_gpu_ali/final.mdl) | [ASpIRE](http://kaldi-asr.org/models/m4)  |
+| [Tedlium](http://kaldi-asr.org/downloads/build/9/trunk/egs/tedlium/s5/exp/nnet2_online/nnet_ms_sp_online/final.mdl) | [Callhome](http://kaldi-asr.org/models/m6) |
 | [Timit](http://kaldi-asr.org/downloads/build/7/trunk/egs/timit/s5/exp/tri4_nnet/final.mdl) | [VoxCeleb Models](http://kaldi-asr.org/models/m7) |
 | | [SITW Model](http://kaldi-asr.org/models/m8) |
 
