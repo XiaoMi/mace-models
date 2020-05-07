@@ -4,8 +4,6 @@ stages:
 
 prerequisites:
   stage: prerequisites
-  only:
-    - master
   script:
     - ifconfig | awk '/inet addr/{print substr($2,6)}'
     - pip install --upgrade sh
@@ -13,8 +11,6 @@ prerequisites:
 
 release:
   stage: release
-  only:
-    - master
   script:
     - env
     - DATE_STR=`date "+%Y_%m_%d"`
